@@ -1,23 +1,21 @@
 import 'package:flutter/material.dart';
 
-// Row Widget
+// Column Widget
 void main() {
-  runApp(Row(
-    textDirection: TextDirection.ltr,
-    children: [
-      // it initalize the children list. it can store like array
-      Expanded(
-        child: Text(
-        'one',
-        textDirection: TextDirection.ltr,    // sometimes text are overflow then we can set using expanded
-        style: TextStyle(fontSize: 50.0),    // here text 'one' & 'two' are set by require spaces
-      )),
-      Expanded(
-          child: Text(
+  // Here, represent the column widget
+  runApp(Column(
+    children: <Widget>[
+      Text(
+        // Column Widget can not scroll if element are overflow on display
+        'one', // thus we can use List Widget
+        textDirection: TextDirection.ltr,
+        style: TextStyle(fontSize: 50.0),
+      ),
+      Text(
         'two',
         textDirection: TextDirection.ltr,
         style: TextStyle(fontSize: 50.0),
-      )),
+      ),
       Text(
         'three',
         textDirection: TextDirection.ltr,
