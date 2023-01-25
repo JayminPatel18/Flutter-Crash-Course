@@ -5,13 +5,13 @@ void main() {
   // Here, represent the ListView widget
   runApp(Directionality(
       textDirection: TextDirection.ltr,
-      child: ListView(
-        padding: EdgeInsets.all(15.0),
-        children: [
-          Container(
+      child: ListView(                      // List view
+        padding: EdgeInsets.all(15.0),        // add padding
+        children: [                       // store in children
+          Container(                         // make container to set property from element
               height: 100,
               color: Colors.blue,
-              child: Center(
+              child: Center(                // text posision in center
                 child: Text(
                   'one',
                   textDirection: TextDirection.ltr,
