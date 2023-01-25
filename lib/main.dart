@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 
-// Text Widget
+// Material Widget
 void main() {
-  runApp(Text(
-    'Flutter Crash Course',
-    textDirection: TextDirection.ltr, // ltr - left to right in text Direction
-    style: TextStyle(fontSize: 50.0), // font-size
+  runApp(MaterialApp(
+    title: 'Flutter', // create tittle
+    home: Container(
+      // use container
+      child: Center(
+          // make element in center
+          child: Text(
+        // elements is text
+        'Material App',
+        textDirection: TextDirection.ltr,
+      )),
+    ),
   ));
 }
