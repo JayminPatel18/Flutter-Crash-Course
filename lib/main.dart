@@ -1,36 +1,35 @@
 import 'package:flutter/material.dart';
 
-// Column Widget
+// Container Widget
 void main() {
   // Here, represent the column widget
-  runApp(Column(
-    children: <Widget>[
+  runApp(Container(
+    // properies use in container
+    //padding: EdgeInsets.symmetric(vertical: 50.0,horizontal: 40.0),         // give padding use the container
+    padding: EdgeInsets.all(60.0), // give all side padding same value
+    decoration: BoxDecoration(color: Colors.redAccent),
+
+    child: Column(children: [
       Text(
-        // Column Widget can not scroll if element are overflow on display
-        'one', // thus we can use List Widget
+        'one',
         textDirection: TextDirection.ltr,
-        style: TextStyle(fontSize: 50.0),
+        style: TextStyle(fontSize: 100),
       ),
       Text(
         'two',
         textDirection: TextDirection.ltr,
-        style: TextStyle(fontSize: 50.0),
+        style: TextStyle(fontSize: 100),
       ),
       Text(
         'three',
         textDirection: TextDirection.ltr,
-        style: TextStyle(fontSize: 50.0),
+        style: TextStyle(fontSize: 100),
       ),
       Text(
         'four',
         textDirection: TextDirection.ltr,
-        style: TextStyle(fontSize: 50.0),
+        style: TextStyle(fontSize: 100),
       ),
-      Text(
-        'five',
-        textDirection: TextDirection.ltr,
-        style: TextStyle(fontSize: 50.0),
-      ),
-    ],
+    ]),
   ));
 }
