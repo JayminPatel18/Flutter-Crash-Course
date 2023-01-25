@@ -1,35 +1,113 @@
 import 'package:flutter/material.dart';
 
-// Container Widget
+// ListView Widget
 void main() {
-  // Here, represent the column widget
-  runApp(Container(
-    // properies use in container
-    //padding: EdgeInsets.symmetric(vertical: 50.0,horizontal: 40.0),         // give padding use the container
-    padding: EdgeInsets.all(60.0), // give all side padding same value
-    decoration: BoxDecoration(color: Colors.redAccent),
-
-    child: Column(children: [
-      Text(
-        'one',
-        textDirection: TextDirection.ltr,
-        style: TextStyle(fontSize: 100),
-      ),
-      Text(
-        'two',
-        textDirection: TextDirection.ltr,
-        style: TextStyle(fontSize: 100),
-      ),
-      Text(
-        'three',
-        textDirection: TextDirection.ltr,
-        style: TextStyle(fontSize: 100),
-      ),
-      Text(
-        'four',
-        textDirection: TextDirection.ltr,
-        style: TextStyle(fontSize: 100),
-      ),
-    ]),
-  ));
+  // Here, represent the ListView widget
+  runApp(Directionality(
+      textDirection: TextDirection.ltr,
+      child: ListView(
+        padding: EdgeInsets.all(15.0),
+        children: [
+          Container(
+              height: 100,
+              color: Colors.blue,
+              child: Center(
+                child: Text(
+                  'one',
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(fontSize: 80),
+                ),
+              )),
+          Container(
+              height: 100,
+              color: Colors.purple,
+              child: Center(
+                child: Text(
+                  'two',
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(fontSize: 80),
+                ),
+              )),
+          Container(
+              height: 100,
+              color: Colors.red,
+              child: Center(
+                child: Text(
+                  'three',
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(fontSize: 80),
+                ),
+              )),
+          Container(
+              height: 100,
+              color: Colors.yellow,
+              child: Center(
+                child: Text(
+                  'four',
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(fontSize: 80),
+                ),
+              )),
+          Container(
+              height: 100,
+              color: Colors.green,
+              child: Center(
+                child: Text(
+                  'five',
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(fontSize: 80),
+                ),
+              )),
+          Container(
+              height: 100,
+              color: Colors.orange,
+              child: Center(
+                child: Text(
+                  'six',
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(fontSize: 80),
+                ),
+              )),
+          Container(
+              height: 100,
+              color: Colors.pink,
+              child: Center(
+                child: Text(
+                  'seven',
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(fontSize: 80),
+                ),
+              )),
+          Container(
+              height: 100,
+              color: Colors.deepPurple,
+              child: Center(
+                child: Text(
+                  'eight',
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(fontSize: 80),
+                ),
+              )),
+          Container(
+              height: 100,
+              color: Colors.cyan,
+              child: Center(
+                child: Text(
+                  'nine',
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(fontSize: 80),
+                ),
+              )),
+          Container(
+              height: 100,
+              color: Colors.brown,
+              child: Center(
+                child: Text(
+                  'ten',
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(fontSize: 80),
+                ),
+              ))
+        ],
+      )));
 }
