@@ -18,7 +18,8 @@ class _MyHomePageState extends State<MyHomePage> {
           //   });
           // },
 
-          onChanged: (value) {          // print the text same time to type
+          onChanged: (value) {
+            // print the text same time to type
             setState(() {
               name = value;
             });
