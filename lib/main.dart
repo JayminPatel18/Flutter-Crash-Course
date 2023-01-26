@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// list tile & icons Widget
+// Card Widget
 void main() {
   runApp(MaterialApp(
     title: 'Flutter', // create tittle
@@ -15,35 +15,26 @@ void main() {
         ),
         backgroundColor: Colors.cyan, // set background color
 
-        body: ListView(
-          children: [
-            ListTile(
-              leading: Image.asset('images/cars/car6.jpg'),  // 
-              title: const Text('Car tittle 1'),
-              subtitle: Text('Koenigzegg agera car is supereb...'),
-              trailing: Icon(Icons.delete),
+        body: Center(
+          child: SizedBox(
+            height: 350,
+            child: Card(
+              child: Padding(
+                padding: EdgeInsets.all(20),
+                child: Column(children: [
+                  Image.asset(
+                    'images/cars/samsung.jpg',
+                    height: 200,
+                  ),
+                  Divider(),
+                  Text(
+                    'Samsung S22 Ultra',
+                    style: TextStyle(fontSize: 30),
+                  )
+                ]),
+              ),
             ),
-            ListTile(
-              leading: Image.asset('images/cars/car2.jpg'),  // 
-              title: const Text('Car tittle 2'),
-              subtitle: Text('Lemborgini car is fast...'),
-              trailing: Icon(Icons.delete),
-            ),
-            ListTile(
-              leading: Image.asset('images/cars/car3.jpg'),  // 
-              title: const Text('Car tittle 3'),
-              subtitle: Text('Mercedez car is Luxirious...'),
-              trailing: Icon(Icons.delete),
-            ),
-            ListTile(
-              leading: Image.asset('images/cars/car4.jpg'),  // 
-              title: const Text('Car tittle 4'),
-              subtitle: Text('Mustang car is supereb...'),
-              trailing: Icon(Icons.delete),
-            )
-          ],)
-        
-        ),
-  
+          ),
+        )),
   ));
 }
