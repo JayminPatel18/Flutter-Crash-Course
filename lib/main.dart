@@ -2,7 +2,13 @@ import 'package:flutter/material.dart';
 
 // Card Widget
 void main() {
-  runApp(MaterialApp(
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
     title: 'Flutter', // create tittle
     home: Scaffold(
         appBar: AppBar(
@@ -36,5 +42,6 @@ void main() {
             ),
           ),
         )),
-  ));
+  );
+  }
 }
