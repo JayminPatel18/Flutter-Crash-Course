@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// Card Widget
+// Stateless Widget
 void main() {
   runApp(MyApp());
 }
