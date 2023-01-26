@@ -12,12 +12,25 @@ class MyHomePage extends StatelessWidget {
             child: Column(children: [
               Image.asset(
                 'images/cars/samsung.jpg',
-                height: 200,
+                height: 180,
               ),
               Divider(),
               Text(
                 'Samsung S22 Ultra',
                 style: TextStyle(fontSize: 30),
+              ),
+              TextButton(
+                // here is the button
+                onPressed: () {
+                  print('Button Clicked');
+                },
+
+                child: Text('Click Me'), // modify the text button
+                style: TextButton.styleFrom(
+                    primary: Colors.black,
+                    backgroundColor: Colors.orange,
+                    padding: EdgeInsets.all(10.0),
+                    textStyle: TextStyle(fontSize: 20)),
               )
             ]),
           ),
