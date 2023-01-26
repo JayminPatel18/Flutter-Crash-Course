@@ -1,23 +1,32 @@
 import 'package:flutter/material.dart';
 
-// Material Widget
+// Scalfold Widget
 void main() {
   runApp(MaterialApp(
     title: 'Flutter', // create tittle
-    home: Container(
-      // use container
-      decoration: BoxDecoration(color: Colors.pinkAccent),
-      child: Center(
-          // make element in center
+    home: Scaffold(
+       
+        appBar: AppBar(             // set head
+          title: Text(
+            'My Flutter App',
+            style: TextStyle(color: Colors.black),
+          ), 
+          backgroundColor: Colors.pinkAccent,   
+        ),
+       
+        backgroundColor: Colors.cyan,       // set background color
+       
+        body: Center(
           child: Text(
-        // elements is text
-        'Material App',
-        textDirection: TextDirection.ltr,
-        style: TextStyle(
-            color: Colors.lightBlue, // change text color
-            decoration: TextDecoration
-                .none), // remove the decoration - remove underline
-      )),
-    ),
+            'Material App',
+            textDirection: TextDirection.ltr,
+            style: TextStyle(
+              color: Colors.black,              // set text color
+              decoration: TextDecoration.none,
+              fontSize: 40,
+            ),
+            )
+        )
+      ,)
   ));
 }
