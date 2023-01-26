@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// grid Widget
+// list tile & icons Widget
 void main() {
   runApp(MaterialApp(
     title: 'Flutter', // create tittle
@@ -15,25 +15,35 @@ void main() {
         ),
         backgroundColor: Colors.cyan, // set background color
 
-        body: GridView.extent(
-          // we can use grid view to adjust elements or image as own choice
-
-          maxCrossAxisExtent:
-              300, // pixel according to change the space and adjust the image
-          mainAxisSpacing: 50, // space between the top bottom
-          crossAxisSpacing: 70, // space between the left right
+        body: ListView(
           children: [
-            Image(image: AssetImage('images/cars/car1.jpg')),
-            Image(image: AssetImage('images/cars/car2.jpg')),
-            Image(image: AssetImage('images/cars/car3.jpg')),
-            Image(image: AssetImage('images/cars/car4.jpg')),
-            Image(image: AssetImage('images/cars/car5.jpg')),
-            Image(image: AssetImage('images/cars/car6.jpg')),
-          ],
-        )
-
-        // set image from browser
-
+            ListTile(
+              leading: Image.asset('images/cars/car6.jpg'),  // 
+              title: const Text('Car tittle 1'),
+              subtitle: Text('Koenigzegg agera car is supereb...'),
+              trailing: Icon(Icons.delete),
+            ),
+            ListTile(
+              leading: Image.asset('images/cars/car2.jpg'),  // 
+              title: const Text('Car tittle 2'),
+              subtitle: Text('Lemborgini car is fast...'),
+              trailing: Icon(Icons.delete),
+            ),
+            ListTile(
+              leading: Image.asset('images/cars/car3.jpg'),  // 
+              title: const Text('Car tittle 3'),
+              subtitle: Text('Mercedez car is Luxirious...'),
+              trailing: Icon(Icons.delete),
+            ),
+            ListTile(
+              leading: Image.asset('images/cars/car4.jpg'),  // 
+              title: const Text('Car tittle 4'),
+              subtitle: Text('Mustang car is supereb...'),
+              trailing: Icon(Icons.delete),
+            )
+          ],)
+        
         ),
+  
   ));
 }
