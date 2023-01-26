@@ -21,9 +21,9 @@ class MyApp extends StatelessWidget {
               'My Flutter App',
               style: TextStyle(color: Colors.black),
             ),
-            backgroundColor: Colors.pinkAccent,
+            backgroundColor: Colors.blueAccent,
           ),
-          backgroundColor: Colors.cyan, // set background color
+          backgroundColor: Colors.white, // set background color
 
           body: MyHomePage() // access another file
           ),
