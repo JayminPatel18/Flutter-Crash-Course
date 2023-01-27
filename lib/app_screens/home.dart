@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
+// this file for registration ui using stateful widget
+
+// create the myhomepage exteds the stateful
 class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
+// similarly two class created
 class _MyHomePageState extends State<MyHomePage> {
   final _formKey = GlobalKey<FormState>();
 
@@ -24,6 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: EdgeInsets.symmetric(vertical: 40, horizontal: 30),
         child: ListView(
           children: [
+            // input for name
             TextFormField(
               decoration: InputDecoration(
                   labelText: 'Name : ', labelStyle: TextStyle(fontSize: 20)),
@@ -32,6 +37,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 if (value == null) return 'Please Enter Name';
               },
             ),
+
+            // input for email
             TextFormField(
               decoration: InputDecoration(
                   labelText: 'Email : ', labelStyle: TextStyle(fontSize: 20)),
@@ -43,6 +50,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   return 'Please enter valid email';
               },
             ),
+
+            // input for password
             TextFormField(
               obscureText: true,
               decoration: InputDecoration(
@@ -53,6 +62,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 if (value == null) return 'Please Enter Password';
               },
             ),
+
+            // submit button
             ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
@@ -64,6 +75,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   }
                 },
                 child: Text('Submit')),
+            // verify the user data
+            // print here all parameter
             Text('Name : $name'),
             Text('Email : $email'),
             Text('Password : $password'),
